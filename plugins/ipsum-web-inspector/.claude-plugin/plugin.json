@@ -1,7 +1,7 @@
 {
   "name": "ipsum-web-inspector",
   "description": "Extract real DOM content and styles from web pages using JavaScript execution",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "ipsum",
     "email": ""

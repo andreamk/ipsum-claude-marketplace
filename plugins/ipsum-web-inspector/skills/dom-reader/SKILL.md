@@ -1,7 +1,7 @@
 ---
 name: DOM Reader
-description: This skill should be used when needing to extract the rendered HTML from a web page after JavaScript execution, when WebFetch returns incomplete content from SPAs or dynamic sites, when the task requires inspecting the real DOM structure of a URL, or when the user asks to "read the DOM", "get the HTML", "extract HTML from URL", "inspect page content".
-version: 1.0.1
+description: Use when extracting specific HTML elements (h1, h2, links, images, etc.), scraping page content, or inspecting DOM structure. Also preferred for JavaScript-rendered content or when WebFetch returns incomplete results.
+version: 1.0.2
 ---
 
 # DOM Reader
