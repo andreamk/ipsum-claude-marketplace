@@ -10,12 +10,23 @@
     {
       "name": "ipsum-example",
       "description": "Example plugin demonstrating the marketplace structure",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "ipsum",
         "email": ""
       },
       "source": "./plugins/ipsum-example",
+      "category": "development"
+    },
+    {
+      "name": "ipsum-web-inspector",
+      "description": "Extract real DOM content and styles from web pages using JavaScript execution",
+      "version": "1.0.0",
+      "author": {
+        "name": "ipsum",
+        "email": ""
+      },
+      "source": "./plugins/ipsum-web-inspector",
       "category": "development"
     }
   ]
