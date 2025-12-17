@@ -11,11 +11,11 @@ async function readDOM(url, selector = null) {
 
     let html;
     if (selector) {
-      const element = await page.$(selector);
-      if (!element) {
+      const elements = await page.$$(selector);
+      if (elements.length === 0) {
         throw new Error(`Selector "${selector}" not found on page`);
       }
-      html = await page.$eval(selector, el => el.outerHTML);
+      html = await page.$$eval(selector, els => els.map(el => el.outerHTML).join('\n\n'));
     } else {
       html = await page.content();
     }
