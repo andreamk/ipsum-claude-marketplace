@@ -1,8 +1,8 @@
 {
-  "name": "dom-reader-scripts",
+  "name": "ipsum-web-inspector-scripts",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "puppeteer": "^23.0.0"
+    "puppeteer": "^24.33.0"
   }
 }

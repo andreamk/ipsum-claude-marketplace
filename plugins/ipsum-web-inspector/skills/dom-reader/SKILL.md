@@ -25,20 +25,21 @@ This skill provides guidance for extracting the real DOM content from web pages.
 
 ## Implementation
 
-Use the `scripts/read-dom.js` script with Puppeteer to extract DOM content.
+Use the `read-dom.js` script with Puppeteer to extract DOM content. The script is in the plugin's shared `scripts/` directory.
 
 ### Pre-execution Check
 
-Before running the script, check if `node_modules` exists in the scripts directory. If not, install dependencies:
+Before running the script, check if `node_modules` exists in the plugin's scripts directory. If not, install dependencies:
 
 ```bash
-# Check and install if needed
+# Check and install if needed (run from plugin root)
 [ -d "scripts/node_modules" ] || (cd scripts && npm install)
 ```
 
 ### Basic Usage
 
-To read the entire page:
+Run from plugin root directory:
+
 ```bash
 node scripts/read-dom.js "https://example.com"
 ```
@@ -55,7 +56,7 @@ node scripts/read-dom.js "https://example.com" "#main-content"
 
 ### Script Location
 
-The script is located at `scripts/read-dom.js` within this skill directory.
+The script is located at `scripts/read-dom.js` in the plugin root directory (shared across skills).
 
 ## Output
 
