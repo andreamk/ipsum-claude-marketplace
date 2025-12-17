@@ -1,0 +1,17 @@
+{
+  "name": "ipsum-claude-marketplace",
+  "version": "1.0.0",
+  "description": "Claude marketplace plugins built for developer workflows",
+  "owner": {
+    "name": "ipsum",
+    "email": ""
+  },
+  "plugins": [
+    {
+      "name": "ipsum-example",
+      "description": "Example plugin demonstrating the marketplace structure",
+      "source": "./plugins/ipsum-example",
+      "version": "1.0.0"
+    }
+  ]
+}
