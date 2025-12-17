@@ -1,5 +1,9 @@
 {
   "name": "ipsum-example",
+  "description": "Example plugin demonstrating the marketplace structure",
   "version": "1.0.0",
-  "description": "Example plugin demonstrating the marketplace structure"
+  "author": {
+    "name": "ipsum",
+    "email": ""
+  }
 }

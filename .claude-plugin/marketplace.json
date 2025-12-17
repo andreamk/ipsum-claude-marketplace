@@ -10,8 +10,13 @@
     {
       "name": "ipsum-example",
       "description": "Example plugin demonstrating the marketplace structure",
+      "version": "1.0.0",
+      "author": {
+        "name": "ipsum",
+        "email": ""
+      },
       "source": "./plugins/ipsum-example",
-      "version": "1.0.0"
+      "category": "development"
     }
   ]
 }
