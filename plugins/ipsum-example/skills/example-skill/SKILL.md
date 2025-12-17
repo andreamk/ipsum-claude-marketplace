@@ -1,8 +1,10 @@
+---
+name: Hello World
+description: A simple greeting skill to test the ipsum marketplace
+version: 1.0.0
+---
+
 # Hello World Skill
-
-A simple greeting skill to test the ipsum marketplace.
-
-## Instructions
 
 When this skill is invoked, respond with a friendly greeting message:
 
