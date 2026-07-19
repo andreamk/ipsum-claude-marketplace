@@ -3,10 +3,11 @@
 const puppeteer = require('puppeteer');
 
 async function inspectStyles(url, selector, properties = null, computed = false) {
-  const browser = await puppeteer.launch({ headless: 'new' });
-  const page = await browser.newPage();
+  let browser;
 
   try {
+    browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
 
     const result = await page.evaluate((sel, props, useComputed) => {
@@ -62,9 +63,11 @@ async function inspectStyles(url, selector, properties = null, computed = false)
     console.log(JSON.stringify(result, null, 2));
   } catch (error) {
     console.error(`Error: ${error.message}`);
-    process.exit(1);
+    process.exitCode = 1;
   } finally {
-    await browser.close();
+    if (browser) {
+      await browser.close();
+    }
   }
 }
 
@@ -84,4 +87,7 @@ if (!url || !selector) {
 
 const properties = propertiesArg ? propertiesArg.split(',') : null;
 
-inspectStyles(url, selector, properties, computedFlag);
+inspectStyles(url, selector, properties, computedFlag).catch((error) => {
+  console.error(`Error: ${error.message}`);
+  process.exitCode = 1;
+});

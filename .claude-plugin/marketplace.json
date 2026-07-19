@@ -1,12 +1,25 @@
 {
   "name": "ipsum-claude-marketplace",
-  "version": "1.0.0",
-  "description": "Claude marketplace plugins built for developer workflows",
   "owner": {
     "name": "ipsum",
     "email": ""
   },
+  "metadata": {
+    "description": "Claude marketplace plugins built for developer workflows",
+    "version": "1.0.0"
+  },
   "plugins": [
+    {
+      "name": "hermes-tweet",
+      "description": "Native Hermes Agent X/Twitter plugin for read-first Xquik workflows and approval-gated actions",
+      "version": "0.1.8",
+      "author": {
+        "name": "Xquik",
+        "email": ""
+      },
+      "source": "./plugins/hermes-tweet",
+      "category": "development"
+    },
     {
       "name": "ipsum-example",
       "description": "Example plugin demonstrating the marketplace structure",

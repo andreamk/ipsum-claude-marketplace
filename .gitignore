@@ -10,3 +10,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Plugin dependencies
+node_modules/
