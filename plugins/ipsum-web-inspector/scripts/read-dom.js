@@ -3,10 +3,11 @@
 const puppeteer = require('puppeteer');
 
 async function readDOM(url, selector = null) {
-  const browser = await puppeteer.launch({ headless: 'new' });
-  const page = await browser.newPage();
+  let browser;
 
   try {
+    browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
 
     let html;
@@ -23,9 +24,11 @@ async function readDOM(url, selector = null) {
     console.log(html);
   } catch (error) {
     console.error(`Error: ${error.message}`);
-    process.exit(1);
+    process.exitCode = 1;
   } finally {
-    await browser.close();
+    if (browser) {
+      await browser.close();
+    }
   }
 }
 
@@ -36,4 +39,7 @@ if (!url) {
   process.exit(1);
 }
 
-readDOM(url, selector);
+readDOM(url, selector).catch((error) => {
+  console.error(`Error: ${error.message}`);
+  process.exitCode = 1;
+});
